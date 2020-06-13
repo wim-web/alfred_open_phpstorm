@@ -33,17 +33,31 @@ const items: ScriptFilter[] = data.dirs.flatMap(path => {
   return getProject(path);
 });
 
+let hoge: ScriptFilter[] = [];
+
+const searchWord = input[0]?.toString() ?? null;
+
 if (items.length === 0) {
-  items.push({
+  hoge.push({
     type: "default",
     title: "no result",
     subtitle: "no",
     arg: "no"
   })
+} else {
+  if (searchWord == null) {
+    hoge = items
+  } else {
+    const r = new RegExp(searchWord);
+    hoge = items.filter(item => {
+      const filename = item.title;
+      return !!filename.match(r);
+    })
+  }
 }
 
 const output: Output = {
-  "items": items
+  "items": hoge
 }
 
 console.log(JSON.stringify(output));
