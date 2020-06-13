@@ -31,7 +31,16 @@ const getProject = (path: string): ScriptFilter[] => {
 
 const items: ScriptFilter[] = data.dirs.flatMap(path => {
   return getProject(path);
-})
+});
+
+if (items.length === 0) {
+  items.push({
+    type: "default",
+    title: "no result",
+    subtitle: "no",
+    arg: "no"
+  })
+}
 
 const output: Output = {
   "items": items
