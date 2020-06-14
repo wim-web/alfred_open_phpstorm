@@ -13,8 +13,7 @@ import Paths from "./model/Paths.ts";
 const input: string = parse(args)._[0].toString();
 const param = new Param(input);
 
-const dirname = new URL(".", import.meta.url).pathname;
-const setting: Setting = JSON.parse(readTextFileSync(dirname + 'setting.json')).setting;
+const setting: Setting = JSON.parse(readTextFileSync('./setting.json')).setting;
 
 const paths = new Paths(setting.paths.map(path => {
   return new Path(path);
