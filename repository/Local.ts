@@ -21,7 +21,7 @@ const getProjects = (path: Path, param: Param): ScriptFilter[] => {
       type: "file",
       title: entry.name,
       subtitle: join(path.path, entry.name),
-      arg: entry.name
+      arg: join(path.path, entry.name)
     });
   }
 
