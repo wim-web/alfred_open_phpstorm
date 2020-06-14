@@ -21,3 +21,10 @@ interface Icon {
 export interface Output {
   items: ScriptFilter[]
 }
+
+export const noProject: ScriptFilter[] = [{
+  type: "default",
+  title: "No result",
+  subtitle: "No result matched your input",
+  arg: ""
+}];
