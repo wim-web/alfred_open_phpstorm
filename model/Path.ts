@@ -6,7 +6,7 @@ class Path {
   get lastPath(): string {
     const last = this.path.split('/').pop();
 
-    return last === undefined ? '/' : last;
+    return last === '' ? '/' : last as string;
   }
 
   constructor(path: string) {
