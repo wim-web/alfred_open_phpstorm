@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.wim.open_phpstorm</string>
+	<key>category</key>
+	<string>Tools</string>
+	<key>connections</key>
+	<dict>
+		<key>36FB85E7-6B50-4AE5-A7B8-CC3F09B5AEDB</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>E1A9EA10-F72E-4413-97F4-B34995F18DAE</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>E1A9EA10-F72E-4413-97F4-B34995F18DAE</key>
+		<array/>
+	</dict>
+	<key>createdby</key>
+	<string>wim</string>
+	<key>description</key>
+	<string>Open PhpStorm</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Open PhpStorm</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>eval $(/usr/libexec/path_helper -s)
+export PATH=/usr/local/bin:$($(echo $SHELL) -ic 'echo $PATH'):$PATH
+
+phpstorm {query}</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>E1A9EA10-F72E-4413-97F4-B34995F18DAE</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>ps</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>searching project</string>
+				<key>script</key>
+				<string>eval $(/usr/libexec/path_helper -s)
+export PATH=/usr/local/bin:$($(echo $SHELL) -ic 'echo $PATH'):$PATH
+
+deno run --allow-read ./index.ts "$1" ${setting_path}</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Open PhpStorm Project</string>
+				<key>title</key>
+				<string>Open PhpStorm Project</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>36FB85E7-6B50-4AE5-A7B8-CC3F09B5AEDB</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string></string>
+	<key>uidata</key>
+	<dict>
+		<key>36FB85E7-6B50-4AE5-A7B8-CC3F09B5AEDB</key>
+		<dict>
+			<key>xpos</key>
+			<integer>85</integer>
+			<key>ypos</key>
+			<integer>155</integer>
+		</dict>
+		<key>E1A9EA10-F72E-4413-97F4-B34995F18DAE</key>
+		<dict>
+			<key>xpos</key>
+			<integer>415</integer>
+			<key>ypos</key>
+			<integer>150</integer>
+		</dict>
+	</dict>
+	<key>variables</key>
+	<dict>
+		<key>setting_path</key>
+		<string>/Users/wim/program/setting.json</string>
+	</dict>
+	<key>variablesdontexport</key>
+	<array>
+		<string>setting_path</string>
+	</array>
+	<key>version</key>
+	<string></string>
+	<key>webaddress</key>
+	<string></string>
+</dict>
+</plist>
