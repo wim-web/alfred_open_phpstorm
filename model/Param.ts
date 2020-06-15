@@ -9,7 +9,7 @@
 class Param {
 
   private readonly _dirParam: string | null;
-  private readonly _projectParam: string;
+  private readonly _projectParam: string | null;
 
   get dirParam() {
     return this._dirParam;
@@ -30,7 +30,7 @@ class Param {
     if (param.startsWith(':')) {
       // 3つ目の「:」は考慮しない
       const [_, dirParam, projectParam] = param.split(':');
-      return [dirParam, projectParam];
+      return [dirParam, projectParam ?? null];
     } else {
       return [null, param];
     }
