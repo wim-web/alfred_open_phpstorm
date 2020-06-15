@@ -20,7 +20,7 @@ test('only_project_name', () => {
 test('only_directory_name', () => {
   const param = new Param(':directory');
 
-  a.assertStrictEquals(null, param.projectParam);
+  a.assertStrictEquals('', param.projectParam);
   a.assertStrictEquals('directory', param.dirParam);
   a.assertStrictEquals(true, param.hasDirParam());
 });
