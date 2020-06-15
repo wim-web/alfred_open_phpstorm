@@ -1,6 +1,8 @@
 {
   "setting": {
-    "dirs": [
+    "paths": [
+      "path to directory",
+      "path to directory"
     ]
   }
 }
